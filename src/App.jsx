@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import UserCard from './components/UserCard';
 import './App.css';
 
-function App() {
-  const [users, SetUsers] = useState([]);
+function App() {  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/peoples')
+2    fetch('http://localhost:3002/peoples')
       .then((res) => res.json())
-      .then((data) => SetUsers(data))
+      .then((data) => setUsers(data))
       .catch((err) => console.error('Erro ao buscar usuários:', err));
   }, []);
 
