@@ -5,7 +5,7 @@ import './App.css';
 function App() {  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-2    fetch('http://localhost:3002/peoples')
+    fetch('http://localhost:3002/peoples')
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error('Erro ao buscar usuários:', err));
